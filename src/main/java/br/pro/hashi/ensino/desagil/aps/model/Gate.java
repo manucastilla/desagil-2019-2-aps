@@ -10,4 +10,6 @@ public abstract class Gate implements SignalEmitter, SignalReceiver {
     public int getInputSize() {
         return inputSize;
     }
+
+    public abstract boolean read(int outputPin);
 }

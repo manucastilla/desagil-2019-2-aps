@@ -12,7 +12,10 @@ public class NotGate extends Gate {
 
 
     @Override
-    public boolean read() {
+    public boolean read(int outputPin) {
+        if (outputPin != 0) {
+            throw new IndexOutOfBoundsException(outputPin);
+        }
         return nand.read();
     }
 
@@ -25,4 +28,5 @@ public class NotGate extends Gate {
         nand.connect(0, emitter);
         nand.connect(1, emitter);
     }
+
 }

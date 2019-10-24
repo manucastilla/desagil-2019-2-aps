@@ -22,4 +22,9 @@ public class NandGate extends Gate {
         }
         emitters[inputPin] = emitter;
     }
+
+    @Override
+    public boolean read(int outputPin) {
+        return false;
+    }
 }
